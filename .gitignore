@@ -1,0 +1,12 @@
+# dev environment
+node_modules
+.env
+
+# nuxt build
+.nuxt
+.output
+.nitro
+.cache
+
+# MISC
+.DS_Store
