@@ -4,7 +4,13 @@
   "description": "",
   "scripts": {
     "dev": "nuxt dev",
-    "build": "nuxt build"
+    "build": "nuxt build",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "prepare": "husky install",
+    "test": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "e2e": "cypress run"
   },
   "author": "expitc",
   "license": "ISC",
@@ -18,8 +24,16 @@
   },
   "devDependencies": {
     "@nuxt/devtools": "^0.7.1",
+    "@nuxt/test-utils": "^3.6.5",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@vitest/coverage-v8": "^0.34.0",
     "eslint": "^8.46.0",
-    "typescript": "^5.1.6"
+    "eslint-plugin-vitest": "^0.2.8",
+    "happy-dom": "^10.5.2",
+    "husky": "^8.0.0",
+    "nuxt-vitest": "^0.10.2",
+    "typescript": "^5.1.6",
+    "vite-tsconfig-paths": "^4.2.0",
+    "vitest": "^0.33.0"
   }
 }
