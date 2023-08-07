@@ -3,15 +3,19 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "dev": "nuxt dev",
+    "start": "NITRO_PORT=3030 node .output/server/index.mjs",
+    "dev": "nuxt dev -p 3000",
     "build": "nuxt build",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
     "prepare": "husky install",
     "test:vitest": "vitest",
-    "test:coverage": "vitest run --coverage",
-    "e2e": "cypress run",
-    "test": "npm run test:coverage && npm run e2e"
+    "test:vitest:coverage": "vitest run --coverage",
+    "test:cy": "cypress open",
+    "test:cy:e2e": "cypress run",
+    "test": "npm run test:vitest:coverage && npm run test:cy:e2e",
+    "test:ci": "start-server-and-test start http://localhost:3030 test",
+    "test:husky": "npx start-test http://localhost:3030"
   },
   "author": "expitc",
   "license": "ISC",
@@ -34,6 +38,7 @@
     "happy-dom": "^10.5.2",
     "husky": "^8.0.0",
     "nuxt-vitest": "^0.10.2",
+    "start-server-and-test": "^2.0.0",
     "typescript": "^5.1.6",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.33.0"
