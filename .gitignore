@@ -10,3 +10,10 @@ node_modules
 
 # MISC
 .DS_Store
+
+# Cypress
+cypress/videos/*
+cypress/screenshots/*
+
+# Vitest
+coverage
