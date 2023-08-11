@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
-    "start": "NITRO_PORT=3030 node .output/server/index.mjs",
+    "start": "pnpm build && NITRO_PORT=3030 node .output/server/index.mjs",
     "dev": "nuxt dev -p 3000",
     "build": "nuxt build",
     "generate": "nuxt generate",
