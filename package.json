@@ -13,7 +13,7 @@
     "test:vitest:coverage": "vitest run --coverage",
     "test:cy": "cypress open",
     "test:cy:e2e": "cypress run",
-    "test": "npm run test:vitest:coverage && npm run test:cy:e2e",
+    "test": "pnpm run test:vitest:coverage && pnpm run test:cy:e2e",
     "test:ci": "start-server-and-test start http://localhost:3030 test",
     "test:husky": "npx start-test http://localhost:3030"
   },
@@ -25,6 +25,7 @@
     "autoprefixer": "^10.4.14",
     "nuxt": "^3.6.5",
     "postcss": "^8.4.27",
+    "swpm": "^1.11.0",
     "tailwindcss": "^3.3.3"
   },
   "devDependencies": {
@@ -42,5 +43,6 @@
     "typescript": "^5.1.6",
     "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.33.0"
-  }
+  },
+  "swpm": "pnpm"
 }
