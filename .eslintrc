@@ -1,0 +1,14 @@
+{
+  "root": true,
+  "extends": ["@nuxtjs/eslint-config-typescript"],
+  "plugins": [],
+  "rules": {
+    "no-unused-vars": [
+      "error",
+      {
+        "argsIgnorePattern": "^[_,e]",
+        "varsIgnorePattern": "^_"
+      }
+    ]
+  }
+}
