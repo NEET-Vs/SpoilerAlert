@@ -2,7 +2,16 @@
 export default defineNuxtConfig({
   srcDir: 'src/',
   devtools: { enabled: true },
-  modules: ['@nuxtjs/eslint-module', 'nuxt-vitest'],
+  modules: ['@nuxtjs/eslint-module', 'nuxt-vitest', '@chakra-ui/nuxt-next'],
+  chakra: {
+    extendTheme: {
+      colors: {
+        brand: {
+          whitee: '#fff'
+        }
+      }
+    }
+  },
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
