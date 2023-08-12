@@ -10,6 +10,9 @@
   },
   "author": "expitc",
   "license": "MIT",
-  "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "@nuxt/devtools": "^0.8.0",
+    "@types/node": "^20.4.10",
+    "nuxt": "^3.6.5"
+  }
 }
