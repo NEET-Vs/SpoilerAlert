@@ -1,5 +1,9 @@
 <template>
-  <div>
+  <chakra.div px="9" bg="red.400">
     <NuxtWelcome />
-  </div>
+  </chakra.div>
 </template>
+
+<script lang="ts" setup>
+import { chakra } from "@chakra-ui/vue-next";
+</script>
