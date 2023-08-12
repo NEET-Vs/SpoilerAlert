@@ -3,20 +3,34 @@
   "version": "1.0.0",
   "description": "",
   "scripts": {
+    "start": "NITRO_PORT=3030 node .output/server/index.mjs",
     "dev": "nuxt dev -p 3000",
     "build": "nuxt build",
     "generate": "nuxt generate",
-    "preview": "nuxt preview"
+    "preview": "nuxt preview",
+    "test:vitest": "vitest",
+    "test:vitest:coverage": "vitest run --coverage",
+    "test:cy": "cypress open",
+    "test:cy:e2e": "cypress run",
+    "test": "pnpm run test:vitest:coverage && pnpm run test:cy:e2e",
+    "test:ci": "start-server-and-test start http://localhost:3030 test"
   },
   "author": "expitc",
   "license": "MIT",
   "devDependencies": {
     "@nuxt/devtools": "^0.8.0",
+    "@nuxt/test-utils": "^3.6.5",
     "@nuxtjs/eslint-config-typescript": "^12.0.0",
     "@nuxtjs/eslint-module": "^4.1.0",
     "@types/node": "^20.4.10",
+    "@vitest/coverage-v8": "^0.34.1",
+    "cypress": "^12.17.3",
     "eslint-plugin-vitest": "^0.2.8",
+    "happy-dom": "^10.9.0",
     "nuxt": "^3.6.5",
+    "nuxt-vitest": "^0.10.2",
+    "start-server-and-test": "^2.0.0",
+    "vite-tsconfig-paths": "^4.2.0",
     "vitest": "^0.34.1"
   },
   "dependencies": {

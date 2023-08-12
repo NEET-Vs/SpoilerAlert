@@ -1,5 +1,5 @@
 <template>
-  <chakra.div mx="9" bg="purple">
+  <chakra.div px="9" bg="purple">
     <slot />
   </chakra.div>
 </template>

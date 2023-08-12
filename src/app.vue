@@ -1,7 +1,11 @@
 <template>
-  <chakra.div px="9" bg="red.400">
-    <NuxtWelcome />
-  </chakra.div>
+  <NuxtLayout>
+    <chakra.div py="9" bg="aqua">
+      <div class="flex justify-center items-center h-screen bg-red-600">
+        <NuxtPage />
+      </div>
+    </chakra.div>
+  </NuxtLayout>
 </template>
 
 <script lang="ts" setup>
