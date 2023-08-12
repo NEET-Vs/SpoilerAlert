@@ -1,7 +1,13 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   srcDir: 'src/',
-  modules: ['@chakra-ui/nuxt-next', '@nuxtjs/eslint-module', 'nuxt-vitest'],
+  modules: [
+    '@chakra-ui/nuxt-next',
+    '@nuxtjs/eslint-module',
+    'nuxt-vitest',
+    '@nuxtjs/tailwindcss'
+  ],
+  buildModules: ['nuxt-vite'],
   chakra: {
     extendTheme: {
       colors: {
@@ -9,6 +15,13 @@ export default defineNuxtConfig({
           whitee: '#fff'
         }
       }
+    }
+  },
+  css: ['~/assets/css/main.css'],
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {}
     }
   },
   devtools: { enabled: true },
