@@ -1,5 +1,5 @@
 <template>
-  <chakra.div px="9" bg="purple">
+  <chakra.div px="9" bg="brand.whitee" min-h="full">
     <slot />
   </chakra.div>
 </template>

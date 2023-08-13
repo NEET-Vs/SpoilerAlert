@@ -20,7 +20,15 @@ export default defineNuxtConfig({
   css: ['~/assets/css/main.css'],
   postcss: {
     plugins: {
-      tailwindcss: {},
+      tailwindcss: {
+        cssPath: '~/assets/css/main.css',
+        configPath: 'tailwind.config',
+        exposeConfig: false,
+        exposeLevel: 2,
+        config: {},
+        injectPosition: 'first',
+        viewer: true
+      },
       autoprefixer: {}
     }
   },

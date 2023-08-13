@@ -7,6 +7,8 @@ export default mergeConfig(
   nuxtConfig,
   defineConfig({
     test: {
+      globals: true,
+      environment: 'happy-dom',
       include: ['**/*.{test,spec}.?(c|m)[jt]s?(x)'],
       exclude: [
         '**/node_modules/**',
